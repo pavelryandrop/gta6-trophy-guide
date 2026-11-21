@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — Grand Theft Auto VI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Unofficial fan guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">All 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a cited guide for each one, a roadmap to the platinum, and a tracker that saves your progress in this browser.</p>
+  </div>
+  <div class="progress-card" aria-label="Progress">
+    <p class="progress-count" id="progressCount">0 of 55 earned</p>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-grades" id="progressGrades"></p>
+    <p class="progress-note">No online trophies. One playthrough is enough. About 200 hours to platinum (PowerPyx).</p>
+  </div>
+</header>
+
+<section class="warning" id="missableWarning">
+  <h2>⚠ The one missable trophy</h2>
+  <p><strong>Positive Mental Attitude</strong> (meditate at every spot) may be missable: the first meditation is offered at Jason&rsquo;s house in Chapter 1, after the mission <em>Down to Earth</em>. Lucia mentions meditating in the kitchen one morning and walks to the balcony — follow her and accept. It cannot be repeated after Chapter 1.</p>
+</section>
+
+<section id="roadmap">
+  <h2>Roadmap to the platinum</h2>
+  <div class="stages" id="stages"></div>
+  <ul class="warnings" id="warnings"></ul>
+</section>
+
+<section class="controls" aria-label="Filters and tools">
+  <div class="control-row">
+    <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name, mission, activity…" autocomplete="off"></label>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check"><input id="spoiler" type="checkbox"> Spoiler-safe: hide story trophies until earned</label>
+    <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+  </div>
+  <div class="kind-row" id="kindRow" role="group" aria-label="Filter by kind"></div>
+  <div class="control-row tools">
+    <button id="exportBtn" type="button">Export progress (.json)</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset progress</button>
+    <span class="shown" id="shownCount"></span>
+  </div>
+</section>
+
+<main>
+  <ol class="trophy-list" id="trophyList"></ol>
+  <p class="empty" id="emptyNote" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+</main>
+
+<section class="sources" id="sources">
+  <h2>Sources</h2>
+  <p>Every guide above names the guide it draws on, beside the trophy. The full list of sources used for this guide:</p>
+  <ul id="sourceList"></ul>
+  <p class="fineprint">Official trophy names and descriptions are quoted as PlayStation publishes them (PSNProfiles / Exophase trophy list). All guidance text is written for this guide; sources are cited, never copied. This is an unofficial fan guide, not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or game screenshots are used. Rarity figures are not published yet, so none are shown.</p>
+</section>
+
+<footer>
+  <p>Leonida Trophy Guide · works offline · progress is saved in your browser (localStorage) · export it to keep a backup.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
